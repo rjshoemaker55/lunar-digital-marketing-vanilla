@@ -1,0 +1,23 @@
+{
+  "name": "lunar-digital-marketing-vanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjshoemaker55/lunar-digital-marketing-vanilla.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjshoemaker55/lunar-digital-marketing-vanilla/issues"
+  },
+  "homepage": "https://github.com/rjshoemaker55/lunar-digital-marketing-vanilla#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
