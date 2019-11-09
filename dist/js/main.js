@@ -1,3 +1,10 @@
+const typedArray = [
+  'Lunar Web Development',
+  'Custom Websites',
+  'Local Business',
+  'We Care.'
+];
+
 // Select DOM Items
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
@@ -29,4 +36,34 @@ let toggleMenu = () => {
   }
 };
 
+const heading = document.getElementById('typed-heading');
 menuBtn.addEventListener('click', toggleMenu);
+
+let i = 0;
+
+const typeWriter = () => {
+  if (i < typedArray.length) {
+    setTimeout(() => {
+      console.log(i);
+      x = 0;
+      heading.innerHTML = '';
+      typer(typedArray[i]);
+      i++;
+      typeWriter();
+    }, 3000);
+  } else {
+    i = 0;
+    typeWriter();
+  }
+};
+
+let x = 0;
+
+const typer = text => {
+  if (x < text.length) {
+    heading.innerHTML += text.charAt(x);
+    x++;
+    setTimeout(typer.bind(this, text), 100);
+  }
+};
+typeWriter();

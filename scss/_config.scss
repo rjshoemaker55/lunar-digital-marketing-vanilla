@@ -53,3 +53,12 @@ $background-opacity: 0.9;
     @content;
   }
 }
+
+// Set text color
+@function setTextColor($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
